@@ -1,0 +1,38 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock style %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+            <section class="hero">
+                <div class="mission-statement">
+                    <h1>To create a better world for lovely dogs, cats and the people who love them</h1>
+                    <a href="{% url 'why_we_exist' %}" class="btn_who_we_are">WHO WE ARE</a>
+                </div>
+                <div class="dog_cat-image">
+                    <img src="{% static 'images/dogs_and_cats.png' %}" alt="Dog and Cat Together">
+                </div>                
+                <div class="stats">
+                    <div class="stat">
+                        <span class="number">$100M</span>
+                        <span class="label">RAISED</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">12,000</span>
+                        <span class="label">VOLUNTEERS</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">10,500</span>
+                        <span class="label">ADOPTED</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">3</span>
+                        <span class="label">CONTINENTS</span>
+                    </div>
+                </div>
+            </section>
+{% endblock content %}

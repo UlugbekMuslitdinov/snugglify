@@ -1,0 +1,255 @@
+/* Basic Reset */
+
+/* NavBar */
+
+.custom-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 20px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.nav-brand img {
+    margin-right: 10px;
+}
+
+.nav-links {
+    padding-left: 100px;
+    padding-right: 150px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    color: white;
+    font-size: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    padding-left: 10px;
+    font-size: 20px;
+    text-decoration: underline;
+    color: white; 
+}
+
+.dropdown-indicator {
+    margin-left: 5px;
+}
+
+.donate-button {
+    background-color: #0055ff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.donate-button:hover {
+    background-color: #333;
+}
+
+.logIn-button {
+    background-color: #0055ff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-left: none;
+}
+
+.logIn-button:hover {
+    background-color: #333;
+}
+
+.btn_who_we_are {
+    background-color: #0055ff;; 
+    padding: 10px 20px; 
+    color: white; 
+    text-decoration: none; 
+    display: inline-block; 
+    border: none; 
+    cursor: pointer; 
+    text-align: center; 
+    border-radius: 5px; 
+    transition: background-color 0.3s;
+}
+
+.btn_who_we_are:hover {
+    background-color: #333; 
+}
+
+
+
+
+html, body {
+    height: 100%;
+    margin: 0;  
+    color: white;
+    background-color: #000;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero {
+    min-height: calc(100vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission-statement {
+    margin-bottom: 20px; 
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.stat {
+    border: 2px solid;
+    padding: 10px;
+    margin: 5px;
+    text-align: center; 
+}
+
+
+.stat.raised {
+    border-color: #ff4500;
+}
+
+.stat.volunteers {
+    border-color: #ffd700; 
+}
+
+.stat.adopted {
+    border-color: #90ee90; 
+}
+
+.stat.continents {
+    border-color: #add8e6; 
+}
+
+.stat:nth-child(1) {
+    border-color: #ff4500; 
+}
+
+.stat:nth-child(2) {
+    border-color: #ffd700; 
+}
+
+.stat:nth-child(3) {
+    border-color: #90ee90; 
+}
+
+.stat:nth-child(4) {
+    border-color: #add8e6; 
+}
+
+.number {
+    font-size: 1.5em; 
+    display: block; /* Makes it a block element to have its own line */
+}
+
+.label {
+    font-size: 1em; 
+    display: block; /* Makes it a block element to have its own line */
+}
+
+
+.number {
+    font-size: 2em; 
+}
+
+.label {
+    font-size: 1em; 
+}
+
+
+.btn {
+    /* Button styling */
+}
+
+.dog_cat-image {
+    display: flex;
+    justify-content: right; 
+    align-items: center; 
+    height: 50vh; 
+
+}
+
+.dog_cat-image img {
+    max-width: 100%; 
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+.nav-brand {
+    display: flex;
+    justify-content: right; /* Aligns the child element to the right */
+    align-items: center; /* Centers the child element vertically */
+    height: 15vh; 
+
+}
+
+.nav-brand img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; 
+}
+
+
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat .number {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.stat .label {
+    font-size: 1rem;
+}
+
+

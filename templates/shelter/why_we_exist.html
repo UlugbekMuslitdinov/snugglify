@@ -1,0 +1,35 @@
+{% extends '_base.html' %}
+
+{% load static %}
+{% block content %}
+        <section class="intro-page">
+            <div class= "title"> Introduction </div>
+            Welcome to Snugglify, a beacon of hope in the ongoing mission to provide a safer, more loving world 
+            for dogs, cats, and the people who cherish them. At Snugglify, our purpose is more than just a mission; 
+            it's a heartfelt commitment to transforming the lives of pets in need through compassion, care, and community action. 
+            Our organization is the embodiment of a collective dream shared by volunteers, animal welfare organizations, and 
+            kind-hearted individuals who believe in making a significant difference in the lives of our furry friends.
+        </section>
+        <section class="vision">
+            <div class="title">Our Vision </div>
+            Snugglify envisions a world where every dog and cat is cherished, protected, and given the opportunity to live a life 
+            filled with love, security, and happiness. We dream of a global community where the bond between humans and animals 
+            is celebrated and nurtured, ensuring that no pet is left behind or forgotten.
+        </section>
+        <section class="mission">
+            <div class="title">Our Mission </div>
+            Our mission is to unite animal defense organizations, volunteers, sponsors, and prospective pet owners under one roof, 
+            creating a powerful network dedicated to the welfare of dogs and cats. Snugglif serves as a vital platform facilitating 
+            the connection between those who can offer help and those who are in desperate need of it. Whether it's finding loving 
+            homes for abandoned pets, securing financial support for shelters, or mobilizing volunteers for rescue operations, 
+            Snugglify is committed to being at the forefront of animal welfare.
+        </section>
+
+        <button onclick="toggleDropdown()" class="dropdown-btn">Read More</button>
+
+        <div id="dropdownContent" class="dropdown-content">
+            <p>This is the content that was hidden!</p>
+        </div>
+
+        <script src="{% static 'js/referencePage.js' %}"></script>
+{% endblock content %}

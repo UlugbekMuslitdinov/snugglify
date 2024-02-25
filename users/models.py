@@ -9,6 +9,9 @@ class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=15, unique=True)
 
+    def is_manager(self):
+        return hasattr(self, "manager")
+
 
 class Manager(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, primary_key=True)
