@@ -4,7 +4,98 @@
     <title>{{ shelter.name }}</title>
 </head>
 
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .navbar {
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .navbar h1 {
+        margin: 0;
+    }
+
+    .navbar a:hover {
+        text-decoration: underline;
+    }
+
+    .pets {
+        margin-top: 50px;
+    }
+
+    .petslist {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .petitem {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        width: 25%;
+    }
+
+    .petitem img {
+        margin-bottom: 10px;
+    }
+
+    .info {
+        text-align: left;
+        border: 1px solid #333;
+        padding: 20px;
+        border-radius: 5px;
+    }
+</style>
+
 <body>
-    <h1>Hello, {{ manager.user }}!</h1>
+    <div class="navbar">
+        <div class="container">
+            <h1>Shelter Manager Personal Cabinet</h1>
+            <a href="{% url 'create_pet' %}">Add pet</a>
+            <a href="#">Funds raised</a>
+            <a href="#">Adopted pets</a>
+        </div>
+    </div>
+    <div class="container col-md-6 col-md-offset-3 info">
+        <h1>{{ shelter.name }}</h1>
+        <p>{{ shelter.address }}</p>
+        <p>{{ shelter.city }}, {{ shelter.state }} {{ shelter.zip }}</p>
+        <p>{{ shelter.phone }}</p>
+        <p>{{ shelter.email }}</p>
+        <p>{{ shelter.website }}</p>
+    </div>
+
+    <div class="container col-md-6 col-md-offset-3 pets">
+        <h2>Animals</h2>
+    <div class="petslist">
+            {% for pet in shelter.get_pets %}
+                <div class="col-md-4 petitem">
+                    <img src="{{ pet.photo.url }}" alt="{{ pet.name }}" width="200px" />
+                    <h3><a href="{% url "edit_pet" pet.id %}">{{ pet.name }}</a></h3>
+                    <p>{{ pet.species|title }}</p>
+                    <p>{{ pet.breed }}</p>
+                    <p>{{ pet.age }} years old</p>
+                </div>
+            {% endfor %}
+    </div>
+    </div>
 </body>
 </html>

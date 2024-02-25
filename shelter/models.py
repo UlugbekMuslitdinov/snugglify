@@ -17,3 +17,6 @@ class Shelter(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_pets(self):
+        return self.pet_set.all()

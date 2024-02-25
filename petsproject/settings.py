@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
+    # third-party apps
+    "crispy_forms",
+    "crispy_bootstrap4",
+
     # local apps
     'users.apps.UsersConfig',
     'shelter.apps.ShelterConfig',
@@ -148,3 +152,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 LOGIN_REDIRECT_URL = "account_profile"
 LOGOUT_REDIRECT_URL = "index"
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
