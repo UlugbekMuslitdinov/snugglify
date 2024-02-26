@@ -1,0 +1,51 @@
+{% extends '_base_manager.html' %}
+
+{% block style %}
+    <style>
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 1rem;
+            background-color: transparent;
+        }
+        .table th,
+        .table td {
+            padding: 0.75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+        }
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+        }
+        .table tbody + tbody {
+            border-top: 2px solid #dee2e6;
+        }
+        .table .table {
+            background-color: #fff;
+        }
+        td {
+            border: 1px solid #dee2e6;
+            align-content: center;
+        }
+    </style>
+{% endblock style %}
+
+{% block content %}
+    <h1>Funds raised</h1>
+    <p>Total donations: ${{ total }}</p>
+
+    <h2>Donations</h2>
+    <table class="table">
+        <tr class="table-dark">
+            <th>Donor</th>
+            <th>Amount</th>
+        </tr>
+        {% for donation in donations %}
+        <tr class="table-light">
+            <td>{{ donation.user }}</td>
+            <td>{{ donation.amount }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}

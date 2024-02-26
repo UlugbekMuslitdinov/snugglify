@@ -45,3 +45,21 @@ class BasicUser(models.Model):
     def __str__(self):
         return self.user.full_name
 
+    def pets_adopted(self):
+        return self.pet_set.filter(is_adopted=True, owner=self)
+
+    def amount_donated(self):
+        return self.donation_set.aggregate(models.Sum("amount"))["amount__sum"] or 0
+
+    def shelters_donated(self):
+        return self.donation_set.values("shelter").distinct().count() or 0
+
+
+class Donation(models.Model):
+    user = models.ForeignKey(BasicUser, on_delete=models.CASCADE)
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    shelter = models.ForeignKey(Shelter, on_delete=models.CASCADE)
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user} donated {self.amount} on {self.date}"

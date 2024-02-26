@@ -3,32 +3,53 @@
 {% load static %}
 {% block content %}
         <section class="intro-page">
-            <div class= "title"> Introduction </div>
-            Welcome to Snugglify, a beacon of hope in the ongoing mission to provide a safer, more loving world 
-            for dogs, cats, and the people who cherish them. At Snugglify, our purpose is more than just a mission; 
-            it's a heartfelt commitment to transforming the lives of pets in need through compassion, care, and community action. 
-            Our organization is the embodiment of a collective dream shared by volunteers, animal welfare organizations, and 
+            <div class="txt" id="txt">
+                <b>I</b><b>N</b><b>T</b><b>R</b><b>O</b>
+        </div>
+            Welcome to Snugglify, a place of hope in the ongoing mission to provide a safer, more loving world
+            for dogs, cats, and the people who cherish them. At Snugglify, our purpose is more than just a mission;
+            it is a heartfelt commitment to transforming the lives of pets in need through compassion, care, and community action.
+            Our organization is the embodiment of a collective dream shared by volunteers, animal welfare organizations, and
             kind-hearted individuals who believe in making a significant difference in the lives of our furry friends.
         </section>
+
+
         <section class="vision">
-            <div class="title">Our Vision </div>
-            Snugglify envisions a world where every dog and cat is cherished, protected, and given the opportunity to live a life 
-            filled with love, security, and happiness. We dream of a global community where the bond between humans and animals 
+            <div class="txt" id="txt">
+                <b>O</b><b>U</b><b>R</b><b> </b><b>V</b><b>I</b><b>S</b><b>I</b><b>O</b><b>N</b>
+        </div>
+            Snugglify envisions a world where every dog and cat is cherished, protected, and given the opportunity to live a life
+            filled with love, security, and happiness. We dream of a global community where the bond between humans and animals
             is celebrated and nurtured, ensuring that no pet is left behind or forgotten.
         </section>
         <section class="mission">
-            <div class="title">Our Mission </div>
-            Our mission is to unite animal defense organizations, volunteers, sponsors, and prospective pet owners under one roof, 
-            creating a powerful network dedicated to the welfare of dogs and cats. Snugglif serves as a vital platform facilitating 
-            the connection between those who can offer help and those who are in desperate need of it. Whether it's finding loving 
-            homes for abandoned pets, securing financial support for shelters, or mobilizing volunteers for rescue operations, 
+            <div class="txt" id="txt">
+                <b>O</b><b>U</b><b>R</b><b> </b><b>M</b><b>I</b><b>S</b><b>S</b><b>O</b><b>N</b>
+        </div>
+            Our mission is to unite animal defense organizations, volunteers, sponsors, and prospective pet owners under one roof,
+            creating a powerful network dedicated to the welfare of dogs and cats. Snugglif serves as a vital platform facilitating
+            the connection between those who can offer help and those who are in desperate need of it. Whether it's finding loving
+            homes for abandoned pets, securing financial support for shelters, or mobilizing volunteers for rescue operations,
             Snugglify is committed to being at the forefront of animal welfare.
         </section>
 
         <button onclick="toggleDropdown()" class="dropdown-btn">Read More</button>
 
         <div id="dropdownContent" class="dropdown-content">
-            <p>This is the content that was hidden!</p>
+            <section class="intro-page">
+                <div class="txt" id="txt">
+                    <b>W</b><b>H</b><b>A</b><b>T</b><b> </b><b>W</b><b>E</b><b> </b><b>D</b><b>O</b>
+            </div>
+                <p class="bold-content">Rescue and Adoption:</p> We collaborate with shelters and rescue organizations to ensure dogs and cats find their forever homes.
+                Snugglify is a conduit for hope, connecting compassionate individuals willing to adopt with pets eagerly waiting for a second chance at life.
+                <p class="bold-content">Support and Sponsorship:</p> Recognizing the financial challenges faced by animal welfare organizations,
+                Snugglify aids in securing sponsorships and donations.
+                We empower these organizations to continue their invaluable work, from medical care to shelter operations. Volunteer Engagement: At the heart of Snugglif is our vibrant community of volunteers.
+                We offer a variety of opportunities for individuals to contribute their time and skills, whether through hands-on work at shelters, participation in rescue missions, or advocacy and awareness campaigns.
+                <p class="bold-content">Education and Awareness:</p> We believe in the power of education to foster a more compassionate world.
+                Snugglify is committed to raising awareness about animal welfare issues, responsible pet ownership, and the importance of spaying and neutering to prevent overpopulation.
+
+            </section>
         </div>
 
         <script src="{% static 'js/referencePage.js' %}"></script>

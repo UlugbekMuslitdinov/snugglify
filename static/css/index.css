@@ -44,7 +44,7 @@ a {
     padding-left: 10px;
     font-size: 20px;
     text-decoration: underline;
-    color: white; 
+    color: white;
 }
 
 .dropdown-indicator {
@@ -68,6 +68,7 @@ a {
 }
 
 .logIn-button {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: #0055ff;
     color: white;
     text-decoration: none;
@@ -85,20 +86,20 @@ a {
 }
 
 .btn_who_we_are {
-    background-color: #0055ff;; 
-    padding: 10px 20px; 
-    color: white; 
-    text-decoration: none; 
-    display: inline-block; 
-    border: none; 
-    cursor: pointer; 
-    text-align: center; 
-    border-radius: 5px; 
+    background-color: #0055ff;;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .btn_who_we_are:hover {
-    background-color: #333; 
+    background-color: #333;
 }
 
 
@@ -106,7 +107,7 @@ a {
 
 html, body {
     height: 100%;
-    margin: 0;  
+    margin: 0;
     color: white;
     background-color: #000;
 }
@@ -129,7 +130,7 @@ main {
 }
 
 .mission-statement {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .stats {
@@ -142,7 +143,7 @@ main {
     border: 2px solid;
     padding: 10px;
     margin: 5px;
-    text-align: center; 
+    text-align: center;
 }
 
 
@@ -151,50 +152,50 @@ main {
 }
 
 .stat.volunteers {
-    border-color: #ffd700; 
+    border-color: #ffd700;
 }
 
 .stat.adopted {
-    border-color: #90ee90; 
+    border-color: #90ee90;
 }
 
 .stat.continents {
-    border-color: #add8e6; 
+    border-color: #add8e6;
 }
 
 .stat:nth-child(1) {
-    border-color: #ff4500; 
+    border-color: #ff4500;
 }
 
 .stat:nth-child(2) {
-    border-color: #ffd700; 
+    border-color: #ffd700;
 }
 
 .stat:nth-child(3) {
-    border-color: #90ee90; 
+    border-color: #90ee90;
 }
 
 .stat:nth-child(4) {
-    border-color: #add8e6; 
+    border-color: #add8e6;
 }
 
 .number {
-    font-size: 1.5em; 
+    font-size: 1.5em;
     display: block; /* Makes it a block element to have its own line */
 }
 
 .label {
-    font-size: 1em; 
+    font-size: 1em;
     display: block; /* Makes it a block element to have its own line */
 }
 
 
 .number {
-    font-size: 2em; 
+    font-size: 2em;
 }
 
 .label {
-    font-size: 1em; 
+    font-size: 1em;
 }
 
 
@@ -204,14 +205,14 @@ main {
 
 .dog_cat-image {
     display: flex;
-    justify-content: right; 
-    align-items: center; 
-    height: 50vh; 
+    justify-content: right;
+    align-items: center;
+    height: 50vh;
 
 }
 
 .dog_cat-image img {
-    max-width: 100%; 
+    max-width: 100%;
     max-height: 100%;
     object-fit: contain;
 }
@@ -219,16 +220,16 @@ main {
 
 .nav-brand {
     display: flex;
-    justify-content: right; /* Aligns the child element to the right */
-    align-items: center; /* Centers the child element vertically */
-    height: 15vh; 
+    justify-content: right;
+    align-items: center;
+    height: 15vh;
 
 }
 
 .nav-brand img {
-    max-width: 100%; 
-    max-height: 100%; 
-    object-fit: contain; 
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 
@@ -252,4 +253,168 @@ main {
     font-size: 1rem;
 }
 
+.nav-brand a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
 
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.nav-brand img {
+    margin-right: 10px;
+}
+
+.nav-brand {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 15vh;
+
+}
+
+.nav-brand img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Section styling for intro-page, vision, and mission */
+section {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    max-width: 720px;
+    margin: auto;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+
+/* Footer styling */
+footer {
+}
+
+.title {
+    font-style: italic;
+    text-align: center;
+}
+
+
+    section {
+        margin: auto;
+        font-size: 20px;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+.bold-content {
+    font-weight: bold;
+}
+
+
+    /* style.css button */
+.dropdown-content {
+    font-family: 'Arial', sans-serif;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown-btn {
+    font-family: 'Arial', sans-serif;
+    background-color: #0055ff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.dropdown-btn:hover {
+    background-color: #333;
+}
+
+
+
+#txt{
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   flex:1;
+   font-family:sans-serif;
+   font-size:1.5rem;
+   font-weight:700;
+   position:relative;
+   transform-style:preserve-3d;
+   perspective:100px;
+   -webkit-transform-style:preserve-3d;
+   -webkit-perspective:100px;
+}
+#txt>b{
+   height:1.5rem;
+   box-shadow:0 .4rem .3rem -.3rem #aaa;
+   color:#979c9f;
+   background:linear-gradient(black,white);
+   background-clip:text;
+   -webkit-background-clip:text;
+   -webkit-text-fill-color:transparent;
+   transform-origin:bottom;
+   transform:rotateX(-85deg);
+   -webkit-transform-origin:bottom;
+   -webkit-transform:rotateX(-85deg);
+   animation:getUp 7s infinite;
+}
+#txt>b:nth-child(2){
+   animation-delay:.25s;
+}
+#txt>b:nth-child(3){
+   animation-delay:.5s;
+}
+#txt>b:nth-child(4){
+   animation-delay:.75s;
+}
+#txt>b:nth-child(5){
+   animation-delay:1s;
+}
+#txt>b:nth-child(6){
+   animation-delay:1.25s;
+}
+#txt>b:nth-child(7){
+   animation-delay:1.5s;
+}
+#txt>b:nth-child(8){
+   animation-delay:1.75s;
+}
+@keyframes getUp{
+   10%,50%{
+      transform:rotateX(0);
+   }
+   0%,60%,100%{
+      transform:rotateX(-85deg);
+   }
+}

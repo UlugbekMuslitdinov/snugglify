@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% block style %}
+{% endblock style %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Your request to adopt a pet has been submitted!</h2>
+                <p>Thank you for your interest in adopting a pet from the shelter. We will review your request and get back to you as soon as possible.</p>
+                <a href="{% url 'account_profile' %}"><button class="btn btn-primary">Back to Profile</button></a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,57 @@
+{% extends '_base.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block style %}
+    <style>
+        .form-holder {
+            margin: 20px 0;
+        }
+
+        .search-results {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .pet {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .pet-image {
+            margin-bottom: 10px;
+        }
+    </style>
+{% endblock style %}
+
+{% block content %}
+    <h2>Search results</h2>
+    <div class="form-holder">
+        <form method="get" action="{% url 'pet_search' %}">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+
+    <div class="search-results">
+        {% for pet in pets %}
+            <a href="{% url 'pet_detail' pet.id %}" >
+            <div class="pet">
+                <img src="{{ pet.photo.url }}" alt="{{ pet.name }}" style="width: 200px" class="pet-image">
+                <h3>Name: {{ pet.name }}</h3>
+                <p>Specie: {{ pet.species }}</p>
+                <p>Breed: {{ pet.breed }}</p>
+                <p>Age: {{ pet.age }}</p>
+                <p>Shelter: {{ pet.shelter }}</p>
+                <p>Location: {{ pet.shelter.address }}, {{ pet.shelter.city }}, {{ pet.shelter.state }}</p>
+            </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock content %}

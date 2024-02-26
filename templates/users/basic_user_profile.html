@@ -1,0 +1,42 @@
+{% extends '_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block style %}
+    <style>
+        main {
+            min-height: 20vh;
+        }
+
+        .userstats {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+    </style>
+{% endblock style %}
+
+{% block content %}
+    <h1>Hi, {{ user }}.</h1>
+    <div class="userstats">
+    <p>Here are your statistics as a contributor of Snugglify:</p>
+    <ul>
+        <li>Number of Pets Adopted: {{ stats.adopted }}</li>
+        <li>Total Amount Donated: ${{ stats.donations }}</li>
+        <li>Number of Shelters received your donations: {{ stats.shelters_donated }}</li>
+        <li>Your score so far: {{ stats.score }}</li>
+    </ul>
+    </div>
+
+    <div class="petsearch">
+        <h2>Search for a pet to adopt</h2>
+        <form action="{% url 'pet_search' %}" class="form-inline" method="get">
+            {% csrf_token %}
+            {{ search_form|crispy }}
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+{% endblock content %}

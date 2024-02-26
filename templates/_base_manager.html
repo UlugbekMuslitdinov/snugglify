@@ -1,0 +1,84 @@
+<!DOCTYPE_html>
+<html>
+<head>
+    <title>{{ shelter.name }}</title>
+    {% block style %}
+{% endblock style %}
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .navbar {
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .navbar h1 {
+        margin: 0;
+    }
+
+    .navbar a:hover {
+        text-decoration: underline;
+    }
+
+    .pets {
+        margin-top: 50px;
+    }
+
+    .petslist {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .petitem {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        width: 25%;
+    }
+
+    .petitem img {
+        margin-bottom: 10px;
+    }
+
+    .info {
+        text-align: left;
+        border: 1px solid #333;
+        padding: 20px;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <h1>Shelter Manager Personal Cabinet</h1>
+            <a href="{% url 'account_profile' %}">Home</a>
+            <a href="{% url 'create_pet' %}">Add pet</a>
+            <a href="{% url 'funds_raised' %}">Funds raised</a>
+            <a href="#">Adopted pets</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
+    {%block content %}
+    {% endblock content %}
+</body>
+</html>

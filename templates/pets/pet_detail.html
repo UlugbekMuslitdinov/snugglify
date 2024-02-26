@@ -1,0 +1,41 @@
+{% extends '_base.html' %}
+
+{% block style %}
+    <style>
+        img {
+            max-width: 300px;
+        }
+    </style>
+
+    <script>
+        function adoptme() {
+        {#    ASK adopter for their intention to adopt the pet#}
+{#          if yes, redirect to main page#}
+{#          if no, redirect to main page#}
+
+            let adopt = confirm("Are you sure you want to adopt this pet?");
+            if (adopt) {
+                window.location.href = "{% url 'adopt' pet.id %}";
+            } else {
+                window.location.href = "{% url 'index' %}";
+            }
+        }
+    </script>
+{% endblock style %}
+
+{% block content %}
+    <h2>Pet details</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <p><strong>Name:</strong> {{ pet.name }}</p>
+            <p><strong>Species:</strong> {{ pet.species }}</p>
+            <p><strong>Breed:</strong> {{ pet.breed }}</p>
+            <p><strong>Age:</strong> {{ pet.age }}</p>
+            <p><strong>Description:</strong> {{ pet.description }}</p>
+            <button class="btn btn-primary" onclick="adoptme()">Adopt me!</button>
+        </div>
+        <div class="col-md-6">
+            <img src="{{ pet.photo.url }}" alt="{{ pet.name }}" class="img-fluid" style="width: 300px">
+        </div>
+    </div>
+{% endblock content %}
