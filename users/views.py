@@ -9,6 +9,8 @@ from django.db import models
 
 from django.conf import settings
 
+from pets.models import AdoptionRequest
+
 
 
 # Create your views here.
@@ -79,4 +81,14 @@ def funds_raised(request):
         total = donations.aggregate(models.Sum("amount"))["amount__sum"] or 0
         context = {"shelter": shelter, "donations": donations, "total": total}
         return render(request, "users/funds_raised.html", context)
+    return redirect("account_profile")
+
+
+def view_adoptions(request):
+    manager = request.user.manager
+    if manager:
+        shelter = manager.shelter
+        adoptions = AdoptionRequest.objects.filter(pet__shelter=shelter)
+        context = {"shelter": shelter, "adoptions": adoptions}
+        return render(request, "users/view_adoptions.html", context)
     return redirect("account_profile")

@@ -1,0 +1,50 @@
+{% extends '_base_manager.html' %}
+
+{% block style %}
+    <style>
+        .table-responsive {
+            margin-top: 20px;
+        }
+
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+            border: 1px solid #000;
+        }
+
+        tr th {
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+    </style>
+{% endblock style %}
+
+{% block content %}
+    <h2>Manage Adoption Requests</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Animal</th>
+                    <th>Requester</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for request in adoptions %}
+                    <tr>
+                        <td>{{ request.id }}</td>
+                        <td>{{ request.pet.name }}</td>
+                        <td>{{ request.adopter.user.full_name }}</td>
+                        <td>{% if request.is_pending %}Pending{% else %}Confirmed{% endif %}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

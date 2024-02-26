@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -159,3 +159,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 # Stripe config
 STRIPE_TEST_PUBLISHABLE_KEY = os.environ.get("STRIPE_TEST_PUBLISHABLE_KEY")
 STRIPE_TEST_SECRET_KEY = os.environ.get("STRIPE_TEST_SECRET_KEY")
+
+
+CSRF_TRUSTED_ORIGINS = ["http://localhost", "https://64b5-2607-f140-6000-80e4-3861-27e7-2dbc-d71d.ngrok-free.app"]
