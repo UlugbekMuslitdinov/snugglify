@@ -7,6 +7,8 @@ from pets.forms import PetSearchForm
 from .forms import DonationForm
 from django.db import models
 
+from django.conf import settings
+
 
 
 # Create your views here.
@@ -66,7 +68,7 @@ def donation_request(request):
             donation.user = request.user.basicuser
             donation.save()
             return redirect("account_profile")
-    return render(request, "users/donation_request.html", {"form": form})
+    return render(request, "users/donation_request.html", {"form": form, "stripe_key": settings.STRIPE_TEST_PUBLISHABLE_KEY})
 
 
 def funds_raised(request):

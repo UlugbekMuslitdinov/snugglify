@@ -4,9 +4,17 @@
 
 {% block content %}
     <h2>Donation form</h2>
+
     <form method="post">
     {% csrf_token %}
     {{ form|crispy }}
-    <button type="submit" class="btn btn-primary">Donate</button>
+        <script>
+            var amount = document.getElementById('id_amount');
+        </script>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ stripe_key }}"
+            data-description="Donation to charity"
+            data-amount={{ amount.value }}
+            data-locale="auto"></script>
     </form>
 {% endblock content %}

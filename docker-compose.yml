@@ -3,11 +3,11 @@ version: '3.7'
 services:
   web:
     build: .
-    command: python /code/manage.py runserver 0.0.0.0:8000
+    command: python /code/manage.py runserver 0.0.0.0:8500
     volumes:
       - .:/code
     ports:
-      - "8000:8000"
+      - "8500:8500"
     env_file:
       - .env
     depends_on:
